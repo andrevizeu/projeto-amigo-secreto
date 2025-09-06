@@ -16,15 +16,15 @@ function adicionarAmigo(){
     limparCampo();
 }
 
-function atualizarListaAmigos(){
+function atualizarListaAmigos() {
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";
 
-    for(let i=0; i < listaAmigos.length; i++) {
+    listaAmigos.forEach(function(amigo){
         let li = document.createElement('li');
-        li.textContent = listaAmigos[i];
+        li.textContent = amigo;
         lista.appendChild(li);
-    }
+    });
 }
 
 function sortearAmigo(){
