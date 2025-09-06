@@ -37,10 +37,16 @@ function sortearAmigo(){
     let amigoSorteado = listaAmigos[indiceAleatorio];
 
     let resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li>${amigoSorteado}</li>`;
+    resultado.innerHTML = 'Amigo Sorteado: ' + `<li>${amigoSorteado}</li>`;
 }
 
 function limparCampo() {
     entradaNome = document.getElementById('amigo');
     entradaNome.value = "";
+}
+
+function reiniciarJogo() {
+    listaAmigos = [];
+    document.getElementById('listaAmigos').innerHTML = "";
+    document.getElementById('resultado').innerHTML = "";
 }
